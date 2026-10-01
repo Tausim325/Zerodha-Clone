@@ -22,16 +22,12 @@ const app = express();
 // app.use(cors());
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://zerodha-clone-frontend.onrender.com",
-      "https://zerodha-dashboard-u2j5.onrender.com",
-    ],
+    origin: ["http://localhost:3000", "http://localhost:3001"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use("/", authRoute);
