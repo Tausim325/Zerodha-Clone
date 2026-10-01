@@ -23,7 +23,7 @@ function SignUp() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+        `${process.env.REACT_APP_API_URL}/signup`,
         { ...inputValue },
         { withCredentials: true }
       );
