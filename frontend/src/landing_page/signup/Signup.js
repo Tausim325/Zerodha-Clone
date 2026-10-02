@@ -29,7 +29,7 @@ function SignUp() {
       );
 
       if (data.success) {
-        window.location.href = "http://localhost:3001";
+       window.location.href = process.env.REACT_APP_DASHBOARD_URL;
       } else {
         setError(data.message);
       }
